@@ -2,15 +2,16 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header';
 import FlashBanner from './components/FlashBanner';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <>
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
       <FlashBanner />
       <div className="app-container">
         <Header />
         
-        <main className="main-content" style={{ paddingTop: "80px" }}>
+        <main className="main-content" style={{ paddingTop: "80px", paddingBottom: "80px" }}>
           <section className="hero-section fade-in">
             <h1 className="hero-title">Tăng Tương Tác TikTok</h1>
             <p className="hero-description">
@@ -45,8 +46,10 @@ function App() {
             </div>
           </section>
         </main>
+        
+        <Footer />
       </div>
-    </>
+    </div>
   );
 }
 

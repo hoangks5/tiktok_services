@@ -1,0 +1,118 @@
+:root {
+  --flash-banner-height: 60px;
+}
+
+.flash-banner {
+  background: linear-gradient(45deg, #ff0844, #fe2c55);
+  color: white;
+  padding: 12px 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  height: var(--flash-banner-height);
+}
+
+.flash-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.flash-icon {
+  font-size: 20px;
+  animation: flash 1s infinite;
+}
+
+.flash-text {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.flash-button {
+  background: white;
+  color: #fe2c55;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.flash-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes flash {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Thêm styles mới cho đồng hồ đếm ngược */
+.countdown-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 0;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+.countdown-number {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .flash-text {
+    font-size: 14px;
+  }
+  
+  .flash-button {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+  
+  .flash-content {
+    gap: 10px;
+  }
+  
+  .countdown-container {
+    gap: 8px;
+  }
+  
+  .countdown-item {
+    padding: 2px 6px;
+  }
+  
+  .countdown-number {
+    font-size: 14px;
+  }
+  
+  .countdown-label {
+    font-size: 8px;
+  }
+} 
